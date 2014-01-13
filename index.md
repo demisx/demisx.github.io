@@ -11,7 +11,7 @@ title: "@demisx&mdash;Born-again Rubyist Blog"
       <div><span class="small text-muted">{{ post.date | date: "%B %d, %Y" }}</span></div>
       <div>
         <p>
-          {{ post.excerpt }} <a href="{{ post.url }}" class="lead">Read&nbsp;more</a>
+          {{ post.excerpt }} <a href="{{ post.url }}" class="lead">Read&nbsp;entire&nbsp;post...</a>
         </p>
       </div>
     </div>

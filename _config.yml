@@ -1,4 +1,6 @@
 name: "Born-again Rubyist Blog"
+safe: true
+lsi: false
 description: Blog from born-again ruyist @demisx
 markdown: redcarpet
 pygments: true
