@@ -122,8 +122,7 @@ highlighted snippets in my posts a walk in a park. On the other hand, it introdu
 For now, I am sticking with built-in highlighter (Option 1) with GitHub gists being my fall-back option if 
 things go south.
 
-##### Forward looking statements
+##### My environment
 
-The solutions given in this posts were modestly tested on Jekyll v1.4.2 and may not cover all edge cases. 
-They have not been tested on some older browsers that didn't bother to properly follow CSS standards 
-at the time.
+Modestly tested on Jekyll v1.4.3 and may not cover all edge cases. Not been tested on some older 
+browsers that didn't bother to properly follow CSS standards at the time.
