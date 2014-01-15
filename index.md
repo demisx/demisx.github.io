@@ -4,7 +4,7 @@ title: "@demisx&mdash;Born-again Rubyist Blog"
 ---
 
 <div id="home">
-  {% for post in site.posts limit: 5 %}
+  {% for post in site.posts limit: 10 %}
     <div class="row">
       <div><a href="{{ post.url }}"><h2>{{ post.title }} &raquo;</h2></a></div>
       <hr>
