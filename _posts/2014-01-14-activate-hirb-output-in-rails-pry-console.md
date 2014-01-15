@@ -59,8 +59,10 @@ console use `Hirb.disable` | `Hirb.enable` commands respectively:
 [6] pry(main)> 
 {% endhighlight %}
 
-##### My environment
+___
+##### Today my environment was:
 
-Tested on Rails 4.0.2 pry-enabled console and may not cover all edge cases. Pry version 0.9.12.4 
-on Ruby 2.1.0.
+- Rails 4.0.2 pry-enabled console
+- Pry version 0.9.12.4 
+- Ruby MRI 2.1.0.
 
