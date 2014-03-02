@@ -6,21 +6,21 @@ categories: rails-api
 ---
 
 You've finally realized the value of SOA 
-([Service Oriented Architecture](http://en.wikipedia.org/wiki/Service-oriented_architecture)) 
-and decided to move all of your dynamic futnctionality into an independent service layer. Smart!
+([Service Oriented Architecturee](http://en.wikipedia.org/wiki/Service-oriented_architecture)) 
+and decided to move all of your dynamic functionality into an independent service layer. Smart!
 
 You start turning your cool dynamic features into REST JSON web services and then have your HTML 
 sites (a.k.a consumer) query these services for JSON data (a.k.a. provider). However, the response from 
 your web service is coming back blank, though the HTTP response status says 200 OK and
 you can see JSON data when accessing the web service endpoint directly. Sounds familiar?
 
-What you may be deailing with here is known as a 
+What you may be dealing with here is known as a 
 [Cross-origin Resource Sharing (CORS)](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) 
 and covers situations where a web service you are querying is on a different site compared to the one 
 initiating the request. Browsers ban such requests trying to comply with so-called
 "[Same Origin Security Policy](http://en.wikipedia.org/wiki/Same_origin_policy)".
 
-Here, it is important 3to understand what a site is in this particular context:
+Here, it is important to understand what a site is in this particular context:
 
 <div class="alert alert-warning">
 <i class="fa fa-lightbulb-o fa-2x"></i> "Site" is a combination of scheme, hostname, and port number.
