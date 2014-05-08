@@ -3,5 +3,5 @@ safe: true
 lsi: false
 description: Blog from born-again ruyist @demisx
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 url: http://demisx.github.io
