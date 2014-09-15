@@ -6,9 +6,9 @@ categories: angularjs
 ---
 
 A few months ago, I finally had a chance to get my hands on the so-much-talked-about
-`AngularJS` framework and I really digged it. I liked it so much that I am 100%
-sure this framework will stay ahead of others for a long time. Well, in our world this
-means for at least another year or two.
+[AngularJS](https://angularjs.org/) framework and I really digged it. In fact, 
+I like it so much that I am 100% sure this framework will stay ahead of others 
+for a long time. Well, in our world this means for at least another year or two.
 
 Though, I've got the basics down fairly fast, I had hard time around understanding
 the proper code organization. Being a perfectionist didn't help either. Coming from a very
