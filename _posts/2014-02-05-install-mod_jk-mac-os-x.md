@@ -43,15 +43,15 @@ Follow these steps to patch this bug:
 of code {% highlight c# %}
 int jk_map_get_int(jk_map_t *m, const char *name, int def)
 {
-  char buf[100];
-  const char *rc;
-  size_t len;
-  int int_res;
-  int multit = 1;
+    char buf[100];
+    const char *rc;
+    size_t len;
+    int int_res;
+    int multit = 1;
 
-  sprintf(buf, "%d", def);
-  rc = jk_map_get_string(m, name, buf);
-  ... ... ...
+    sprintf(buf, "%d", def);
+    rc = jk_map_get_string(m, name, buf);
+    ... ... ...
 {% endhighlight %} 
 
 2. Replace it with the following snippet: {% highlight c# %}
