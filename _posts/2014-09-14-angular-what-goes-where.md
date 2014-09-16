@@ -61,7 +61,7 @@ starting point depending on what you are trying to achieve.
     <th class="text-center">What</th>
     <th class="text-center">Component</th>
     <th class="text-center">Sub-component</th>
-    <th class="text-center">Naming<br/> Convention</th>
+    <th class="text-center">Examples</th>
     <th class="text-center">Notes</th>
   </tr>
   <tr>
@@ -181,34 +181,47 @@ starting point depending on what you are trying to achieve.
       displayName<br/>
       startsWith<br/>
       sortBy
+      pluralize
     </td>
-    <td>pluralize</td>
+    <td></td>
   </tr>
   <tr>
     <td>
-      Application-wide value objects or primitives that controller or service
-      components need access to. <u>Cannot be</u> injected into the 
-      `module.config` phase, but can be altered by a `Decorator`.
+      <ol>
+        <li>Editable application-wide settings</li>
+        <li>Editable application-wide value objects or primitives 
+            that controller or service components need access to. 
+        </li>
+      </ol>
     </td>
     <td>Value</td>
     <td></td>
-    <td>currentUser</td>
-    <td>Examples could include an object that tracks currently logged in user 
+    <td>
+      uiConfig<br/>
+      currentUser</td>
+    <td><u>Cannot be</u> injected into the 
+      `module.config` phase, but can be altered by a `Decorator`.
+    Examples could include an object that tracks currently logged in user 
     properties or any other object, properties of which you want to access in
     various parts of your application</td>
   </tr>
   <tr>
     <td>
-      Application-wide configuration settings that, besides controller and a service, 
-      <u>can also be injected</u> into the `module.config` phase.
+      <ol>
+        <li>Constant application-wide settings</li>
+      </ol>
     </td>
     <td>Constant</td>
     <td></td>
     <td>
-      appConfig
+      appConfig<br/>
       servicesConfig
     </td>
-    <td>Constants cannot be altered by a `Decorator`</td>
+    <td>Besides controller and a service, Constant <u>can also be injected</u> 
+        into the `module.config` phase. Constants cannot be altered by a 
+        `Decorator`. Avoid modifying the Constant. If you need an editable object
+        or value, use `Value` component/provider instead.
+    </td>
   </tr>
    <tr>
     <td>
