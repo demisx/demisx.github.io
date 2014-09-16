@@ -49,7 +49,8 @@ starting point depending on what you are trying to achieve.
   table#angular-table > tbody > tr > td li {
     padding-bottom: 5px;
   }
-  table#angular-table > tbody > tr > td:nth-child(2) {
+  table#angular-table > tbody > tr > td:nth-child(2),
+  table#angular-table > tbody > tr > td:nth-child(3) {
     font-weight: bold;
     text-align: center;
   }
@@ -154,8 +155,10 @@ starting point depending on what you are trying to achieve.
   </tr>
   <tr>
     <td>
-      1. Business logic specific to the directive
-      2. API methods for communicating between directives
+      <ol>
+        <li>Business logic specific to the directive</li>
+        <li>API methods for communicating between directives</li>
+      </ol>
     </td>
     <td>Directive</td>
     <td>controller</td>
@@ -173,8 +176,12 @@ starting point depending on what you are trying to achieve.
     </ol>
     </td>
     <td>Filter</td>
-    <td>displayName</td>
-    <td>startsWith</td>
+    <td></td>
+    <td>
+      displayName<br/>
+      startsWith<br/>
+      sortBy
+    </td>
     <td>pluralize</td>
   </tr>
   <tr>
