@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "@demisx&mdash;Born-again Rubyist Blog"
+title: "@demisx&mdash;Software patterns and solutions blog"
 ---
 
 <div id="main-content">
