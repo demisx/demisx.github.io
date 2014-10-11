@@ -108,7 +108,7 @@ starting point depending on what you are trying to achieve.
       <ol>
         <li>Models that map to database tables</li>
         <li>CRUD interaction with `RESTful` server-side data sources</li>
-        <li>Business logic <u>specific</u> to the model</li>
+        <li>Business logic <u>specific to the model</u> </li>
       </ol>
     </td>
     <td>Factory</td>
@@ -139,13 +139,14 @@ starting point depending on what you are trying to achieve.
     <td>Directive</td>
     <td>compile<br/> function</td>
     <td></td>
-    <td>Rarely used<sup>1</sup></td>
+    <td>Rarely used<sup>1</sup>. Does not have access to scope.</td>
   </tr>
   <tr>
     <td>
       <ol>
         <li>Manupulations of DOM instances in linked HTML</li>
         <li>Addition of DOM event listeners</li>
+        <li>Directive specific scope watchers and/or attribute observers</li>
       </ol>
     </td>
     <td>Directive</td>
@@ -156,7 +157,7 @@ starting point depending on what you are trying to achieve.
   <tr>
     <td>
       <ol>
-        <li>Business logic specific to the directive</li>
+        <li>Business logic <u>specific to the directive</u></li>
         <li>API methods for communicating between directives</li>
       </ol>
     </td>
