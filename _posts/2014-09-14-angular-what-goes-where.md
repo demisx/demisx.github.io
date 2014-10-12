@@ -58,7 +58,7 @@ starting point depending on what you are trying to achieve.
 
 <table id="angular-table" class="table table-striped table-bordered">
   <tr>
-    <th class="text-center">What</th>
+    <th class="text-center">Use case</th>
     <th class="text-center">Component</th>
     <th class="text-center">Sub-component</th>
     <th class="text-center">Examples</th>
@@ -227,7 +227,7 @@ starting point depending on what you are trying to achieve.
    <tr>
     <td>
       <ol>
-        <li>Augment/wrap an instance after provider has already created it</li>
+        <li>Augment/tweak some-third party service, while leaving the service mostly intact</li>
         <li>Initialize a value in a `Value` component where such initialization 
             requires access to a factory service</li>
       </ol>
