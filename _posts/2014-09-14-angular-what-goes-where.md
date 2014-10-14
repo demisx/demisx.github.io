@@ -31,7 +31,7 @@ starting point depending on what you are trying to achieve.
 
 <div class="alert alert-warning">
 <i class="fa fa-bell-o fa-2x"></i>
-  *Please note that I've intentionally omitted the `Service` component from this list. 
+  *Please note, that I've intentionally omitted the `Service` component from this list. 
   I find that using factories lets me accomplish everything I could do with 
   `Service`, therefore I really had no real need to engage the latter. `Service`
   component does have some limited benefits if you are using CoffeeScript classes, 
