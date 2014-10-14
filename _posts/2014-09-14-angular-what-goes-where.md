@@ -121,7 +121,9 @@ starting point depending on what you are trying to achieve.
   </tr>
   <tr>
     <td>
-      Wire up (e.g. initialize) scope with data and methods for views to use
+      <ol>
+        <li>Wire up (e.g. initialize) scope with data and methods for views to use </li>
+      </ol>
     </td>
     <td>Controller</td>
     <td></td>
@@ -134,7 +136,9 @@ starting point depending on what you are trying to achieve.
   </tr>
   <tr>
     <td>
-      Manupulations of DOM template that you want all directive instances to inherit
+      <ol>
+        <li>Manupulations of DOM template that you want all directive instances to inherit</li>
+      </ol>
     </td>
     <td>Directive</td>
     <td>compile<br/> function</td>
