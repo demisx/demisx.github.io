@@ -22,7 +22,7 @@ the built-in way of highlighting code snippets with included line numbers.
 In order to have Jekyll highlight a 
 snippet of code in your posts you basically need 3 things:
 
-1. Add [syntax highlighter CSS file](https://github.com/mojombo/tpw/blob/master/css/syntax.css) as 
+1. Add [syntax highlighter CSS file](https://gist.github.com/demisx/025698a7b5e314a7a4b5) as 
 `css/syntax.css` to your existing or newly generated Jekyll site
 2. Load CSS inside of a corresponding layout file (e.g. _layouts/default.html) {% highlight html %}
 <head>
