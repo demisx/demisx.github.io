@@ -69,3 +69,5 @@
 .post>.highlight pre code.console { color:#666; background-color: black; padding: inherit;}
 .post>.highlight pre code.console .go { color: #bbb; }
 .post>.highlight pre code.console .gp { color: #999; }
+
+.post p code { color: #333; background-color: #F4F4F4 }
