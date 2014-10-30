@@ -4,7 +4,7 @@ title: "@demisx&mdash;Software patterns and solutions blog"
 ---
 
 <div id="main-content">
-  {% for post in site.posts limit: 10 %}
+  {% for post in site.posts limit: 15 %}
     <div class="row">
       <div><a href="{{ post.url }}"><h2>{{ post.title }}&nbsp;&raquo;</h2></a></div>
       <hr>

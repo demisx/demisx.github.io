@@ -126,7 +126,7 @@ ___
 
 Today my environment was:
 
-- CoffeeScript 1.8.7
+- CoffeeScript 1.8.0
 - AngularJS 1.3.0
 - Node.js 0.10.31
 - Mocha 1.21.4 / Chai 1.9.2
