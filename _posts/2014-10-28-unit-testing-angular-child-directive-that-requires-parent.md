@@ -110,15 +110,24 @@ it.only 'ensures letsAdd can add two numbers', ->
 
 The directive A controller is found and the test happily passes. <i class="fa fa-smile-o fa-lg" style="color:green"> </i>
 
-_This was a contrived example inteded to demonstrate a high level approach on 
+This was a contrived example inteded to demonstrate a high level approach on 
 how one can remove a dependency on other directives during a unit test. Use
 [js2coffe](http://js2coffee.org/) if you need to convert my examples written in 
-CoffeeScript to vanilla JavaScript and then learn CoffeeScript._
+CoffeeScript to vanilla JavaScript and then learn CoffeeScript.</p>
+
+<a class="twitter-follow-button"
+  href="https://twitter.com/demisx1"
+  data-show-count="false"
+  data-lang="en"
+  data-size="large">
+</a> for more tips and best practices.
 
 ___
-##### Today my environment was:
 
+Today my environment was:
+
+- CoffeeScript 1.8.7
 - AngularJS 1.3.0
-- Mocha 1.21.4 / Chai 1.9.2
-- Gulp.js 3.8.8
 - Node.js 0.10.31
+- Mocha 1.21.4 / Chai 1.9.2
+
