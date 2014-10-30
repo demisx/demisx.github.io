@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "AngularJS WGW (What Goes Where) guide"
+title:  "AngularJS 1.x WGW (What Goes Where) guide"
 date:   2014-09-14 6:45:00
 categories: angularjs
 ---
@@ -249,3 +249,10 @@ starting point depending on what you are trying to achieve.
 ___
 <sup>1</sup> See [example](http://stackoverflow.com/questions/13852248/how-to-write-a-double-and-a-ntimes-directive-for-angularjs/13873098#13873098)
 of how a compile function can be used.
+
+<a class="twitter-follow-button"
+  href="https://twitter.com/demisx1"
+  data-show-count="false"
+  data-lang="en"
+  data-size="large">
+</a> for more tips and best practices.
