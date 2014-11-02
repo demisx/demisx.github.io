@@ -5,7 +5,7 @@ demisx.github.io
 
 ```bash
 $ cd ~/projects/demisx/demisx.github.io
-$ jekyll serve -w
+$ jekyll serve -w  # or ./run.sh
 ```
 
 2. Access the home page at `http://localhost:4001/`

@@ -1,7 +1,9 @@
 #main hr, footer hr  { 
-  margin: 0px;
+  /*margin*/: 0px;
 }
 
-#main-content {
+#main #main-content {
   font-size: 16px;
 }
+
+#main #footer-spacing { display:block; height:40px; }
