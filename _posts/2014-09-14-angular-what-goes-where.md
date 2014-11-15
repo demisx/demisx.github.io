@@ -183,10 +183,10 @@ starting point depending on what you are trying to achieve.
     <td>Filter</td>
     <td></td>
     <td>
-      displayName<br/>
-      startsWith<br/>
-      sortBy
-      pluralize
+      displayNameFilter<br/>
+      startsWithFilter<br/>
+      sortByFilter<br/>
+      pluralizeFilter
     </td>
     <td></td>
   </tr>
@@ -219,8 +219,8 @@ starting point depending on what you are trying to achieve.
     <td>Constant</td>
     <td></td>
     <td>
-      appConfig<br/>
-      servicesConfig
+      FACEBOOK_ACCOUNT<br/>
+      AUTH_EVENTS
     </td>
     <td>Besides controller and a service, Constant <u>can also be injected</u> 
         into the `module.config` phase. Constants cannot be altered by a 
