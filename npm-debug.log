@@ -1,0 +1,61 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'info', 'jekyll' ]
+2 info using npm@2.0.0-alpha-5
+3 info using node@v0.10.31
+4 verbose node symlink /usr/local/bin/node
+5 verbose mapToRegistry name jekyll
+6 verbose mapToRegistry uri https://registry.npmjs.org/jekyll
+7 verbose request where is /jekyll
+8 verbose request registry https://registry.npmjs.org/
+9 verbose request id c283ded651609b39
+10 verbose request url raw /jekyll
+11 verbose request url resolving [ 'https://registry.npmjs.org/', './jekyll' ]
+12 verbose request url resolved https://registry.npmjs.org/jekyll
+13 verbose request where is https://registry.npmjs.org/jekyll
+14 verbose request no basic auth needed
+15 info trying registry request attempt 1 at 15:17:01
+16 http GET https://registry.npmjs.org/jekyll
+17 http 404 https://registry.npmjs.org/jekyll
+18 verbose headers { date: 'Tue, 25 Nov 2014 23:17:01 GMT',
+18 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+18 verbose headers   'content-type': 'application/json',
+18 verbose headers   'cache-control': 'max-age=0',
+18 verbose headers   'content-length': '52',
+18 verbose headers   'accept-ranges': 'bytes',
+18 verbose headers   via: '1.1 varnish',
+18 verbose headers   age: '0',
+18 verbose headers   'x-served-by': 'cache-lax1421-LAX',
+18 verbose headers   'x-cache': 'MISS',
+18 verbose headers   'x-cache-hits': '0',
+18 verbose headers   'x-timer': 'S1416957421.565875,VS0,VE76',
+18 verbose headers   'keep-alive': 'timeout=10, max=50',
+18 verbose headers   connection: 'Keep-Alive' }
+19 silly registry.get cb [ 404,
+19 silly registry.get   { date: 'Tue, 25 Nov 2014 23:17:01 GMT',
+19 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+19 silly registry.get     'content-type': 'application/json',
+19 silly registry.get     'cache-control': 'max-age=0',
+19 silly registry.get     'content-length': '52',
+19 silly registry.get     'accept-ranges': 'bytes',
+19 silly registry.get     via: '1.1 varnish',
+19 silly registry.get     age: '0',
+19 silly registry.get     'x-served-by': 'cache-lax1421-LAX',
+19 silly registry.get     'x-cache': 'MISS',
+19 silly registry.get     'x-cache-hits': '0',
+19 silly registry.get     'x-timer': 'S1416957421.565875,VS0,VE76',
+19 silly registry.get     'keep-alive': 'timeout=10, max=50',
+19 silly registry.get     connection: 'Keep-Alive' } ]
+20 error 404 404 Not Found: jekyll
+20 error 404
+20 error 404 'jekyll' is not in the npm registry.
+20 error 404 You should bug the author to publish it
+20 error 404
+20 error 404 Note that you can also install from a
+20 error 404 tarball, folder, or http url, or git url.
+21 error System Darwin 14.0.0
+22 error command "node" "/usr/local/bin/npm" "info" "jekyll"
+23 error cwd /Users/dmoore/projects/demisx/demisx.github.io
+24 error node -v v0.10.31
+25 error npm -v 2.0.0-alpha-5
+26 error code E404
+27 verbose exit [ 1, true ]

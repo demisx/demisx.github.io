@@ -2,7 +2,7 @@
 layout: post
 title:  "Unit testing AngularJS child directive that requires parent directive"
 date:   2014-10-28 21:45:00
-categories: angularjs, unit testing
+categories: angularjs unit-testing
 ---
 
 In AngularJS we can have one or more directives communicate with each other. This 
@@ -31,7 +31,6 @@ angular.module 'app.directives', []
   controller: ->
     @add = (x,y) ->
       x+y
-  return
   
 .directive 'directiveB', ->
   restrict: 'E'
