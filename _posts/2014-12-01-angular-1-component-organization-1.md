@@ -1,23 +1,23 @@
 ---
 layout: post
-title:  "AngularJS 1.x App Component-based Organization <br/>(Part 1)"
+title:  "AngularAtom&mdash;Component-based organization for AngularJS 1.x apps (Part&nbsp;1)"
 date:   2014-12-02 13:59:00
-categories: angularjs component-feature-based-organization
+categories: angularjs atom component-feature-based-organization
 ---
 
 Many of us started the Angular journey by reading the official docs at www.angularjs.org
 and following their [online PhoneCat app tutorial](https://docs.angularjs.org/tutorial). 
 I personally think this is a very good tutorial giving an immediate exposure to 
-the various important concepts of Angular. The code itself 
-is [organized by type](https://github.com/angular/angular-phonecat) 
+the various important concepts of Angular 1. The code is 
+[organized by type](https://github.com/angular/angular-phonecat) 
 where all controllers are placed into one `controllers.js` file, all directives
 are placed in `directives.js`, services in `services.js` and so forth.
 
 Though, this type-based organization works just fine for the small short-lived apps, 
-it has some serious flaws, in my opinion, for any medium or large application that needs
+IMHO, it has some serious flaws for any medium or large application that needs
 to be maintained over time (a.k.a any production app):
 
-* Coupling of various components that belong to different features
+* Coupling of various components that belong to different app features
 * Difficult to locate a particular piece of code related to a given type of functionality
 * Hard to identify all feature related code and reuse it with other apps
 * The files grow longer and longer as more controllers, services etc. being added
@@ -25,9 +25,10 @@ to be maintained over time (a.k.a any production app):
 * Not web-component friendly (think of Angular 2.0)
 
 In the next few posts, we'll try to overcome these shortcomings by learning 
-about component-based organization that groups various web resources around a 
-particular component (or feature) instead of grouping them by type. We'll take the 
-original [type-based Angular PhoneCat app tutorial](https://docs.angularjs.org/tutorial) 
+about component-based organization named 'AngularAtom' that groups various web 
+resources around a particular component instead of grouping them 
+by type. We'll take the original 
+[type-based Angular PhoneCat app tutorial](https://docs.angularjs.org/tutorial) 
 and reorganize it to be [component-based](https://github.com/demisx/angular-phonecat-components).
 This will also help us to get our mind set on the component oriented development 
 today and be better prepared when Angular 2.0 hits the prime time.
@@ -46,7 +47,7 @@ The future posts on this topic will be anounced via Twitter, so make sure to
 For those, who want to see the end result now. Each section of the suggested 
 structure below will be discussed in the future posts in detail.
 
-**LIFT** organization principle:
+AngularAtom organization follows the **LIFT** principle coined by John Papa:
 
 * **L** - Locate code easy
 * **I** - Identify code at a glance
