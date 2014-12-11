@@ -6,17 +6,19 @@ categories: git
 ---
 
 As of git `1.9.4`, it appears that there is no easy way to remove local tags
-that don't exist on remote (a.k.a "stale tags"). According 
+that don't exist on remote (a.k.a "stale tags"). According
 to `--prune` option in `git fetch` [documentaiton](http://git-scm.com/docs/git-fetch) :
 
->  Tags are not subject to pruning if they are fetched only because of the 
-default tag auto-following or due to a `--tags` option. However, 
-if tags are fetched due to an explicit refspec 
-(either on the command line or in the remote configuration, 
-for example if the remote was cloned with the `--mirror` option), 
-then they are also subject to pruning.. 
+<!--more-->
 
-To put it simple, if you are trying to do something like `git fetch -p -t`, 
+>  Tags are not subject to pruning if they are fetched only because of the
+default tag auto-following or due to a `--tags` option. However,
+if tags are fetched due to an explicit refspec
+(either on the command line or in the remote configuration,
+for example if the remote was cloned with the `--mirror` option),
+then they are also subject to pruning..
+
+To put it simple, if you are trying to do something like `git fetch -p -t`,
 it will not work starting with git version `1.9.4`.
 
 However, there is a simple workaround that still works in latest versions:
@@ -32,7 +34,7 @@ A one liner can be written as:
   $ git tag -l | xargs git tag -d && git fetch -t
 ```
 
-Alternative, you can add a new alias to your `~/.gitconfig` file to make things 
+Alternative, you can add a new alias to your `~/.gitconfig` file to make things
 shorter:
 
 ```bash

@@ -1,9 +1,38 @@
-#main hr, footer hr  { 
+h1 { font-size: 1.9em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.2em; }
+
+#main hr, footer hr  {
   /*margin*/: 0px;
 }
 
 #main #main-content {
-  font-size: 16px;
+  font-size: 1em;
 }
 
+#main #main-content .panel .panel-heading {
+  padding: 3px 15px;
+}
+
+#main #main-content .panel .post-date {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  padding: 5px 8px;
+  font-size: 12px;
+  color: #777;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #e1e1e8;
+  border-radius: 0 4px 0 4px;
+}
+
+#main #main-content .panel .post-title {
+  max-width: 90%;
+}
+
+#main #main-content .panel h1 { font-size: 1.5em; }
+
 #main #footer-spacing { display:block; height:40px; }
+
+#main #post-navigation { margin-top:40px; text-align: right; }

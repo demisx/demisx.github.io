@@ -6,35 +6,37 @@ categories: angularjs
 ---
 
 A few months ago, I finally had a chance to get my hands on the so-much-talked-about
-[AngularJS](https://angularjs.org/) framework and I really digged it. In fact, 
-I like it so much that I am 100% sure this framework will stay ahead of others 
+[AngularJS](https://angularjs.org/) framework and I really digged it. In fact,
+I like it so much that I am 100% sure this framework will stay ahead of others
 for a long time. Well, in our world this means for at least another year or two.
+
+<!--more-->
 
 Though, I've got the basics down fairly fast, I had hard time around understanding
 the proper code organization. Being a perfectionist didn't help either. Coming from a very
 opiniated Rails framework it didn't feel comfortable at first that AngularJS gave
 significantly more freedom to do things. But thank God the "Rails magic" is gone!
 
-The type of questions that kept poping up  in my head were: 
+The type of questions that kept poping up  in my head were:
 
-* "OK, I want to code this functionality, but where shoud I really put it"? 
-* Should I stick this code into a View controller, or should I put it into a Service? 
-* Perhaps, a directive could be a good place for it, but then where exactly in a directive? 
+* "OK, I want to code this functionality, but where shoud I really put it"?
+* Should I stick this code into a View controller, or should I put it into a Service?
+* Perhaps, a directive could be a good place for it, but then where exactly in a directive?
 
-Doing my googling I've realized there were plenty of other pilligrims like me 
+Doing my googling I've realized there were plenty of other pilligrims like me
 trying to find their way in this new and exciting AngularJS world.
 
-So, I am putting together this cheatsheet hoping it will guide us on where the stuff 
+So, I am putting together this cheatsheet hoping it will guide us on where the stuff
 should really go. It's not meant to be detail, but it should give you the right
 starting point depending on what you are trying to achieve.
 
 
 <div class="alert alert-warning">
 <i class="fa fa-bell-o fa-2x"></i>
-  *Please note, that I've intentionally omitted the `Service` component from this list. 
-  I find that using factories lets me accomplish everything I could do with 
+  *Please note, that I've intentionally omitted the `Service` component from this list.
+  I find that using factories lets me accomplish everything I could do with
   `Service`, therefore I really had no real need to engage the latter. `Service`
-  component does have some limited benefits if you are using CoffeeScript classes, 
+  component does have some limited benefits if you are using CoffeeScript classes,
   but this would out of the scope of this post. Let's KISS (Keep It Simple Stupid).*
 </div>
 
@@ -68,7 +70,7 @@ starting point depending on what you are trying to achieve.
     <td>
       <ol>
         <li>
-         Reusable application-wide business logic that <u>does&nbsp;not&nbsp;need</u> 
+         Reusable application-wide business logic that <u>does&nbsp;not&nbsp;need</u>
          to be further configured in `module.config` phase
         </li>
         <li>Shareable data</li>
@@ -82,14 +84,14 @@ starting point depending on what you are trying to achieve.
     </td>
     <td>
       These are generally refered to as `application services` or simply `services`.
-      Do not confuse it with the name of AngularJS `Service` component that we've 
+      Do not confuse it with the name of AngularJS `Service` component that we've
       excluded from this post`.
     </td>
   </tr>
   <tr>
     <td>
       <ol>
-        <li>Reusable application business logic that <u>does&nbsp;need</u> to be 
+        <li>Reusable application business logic that <u>does&nbsp;need</u> to be
         configured in `module.config` phase before it can be used</li>
       </ol>
     </td>
@@ -194,8 +196,8 @@ starting point depending on what you are trying to achieve.
     <td>
       <ol>
         <li>Editable application-wide settings</li>
-        <li>Editable application-wide value objects or primitives 
-            that controller or service components need access to. 
+        <li>Editable application-wide value objects or primitives
+            that controller or service components need access to.
         </li>
       </ol>
     </td>
@@ -204,9 +206,9 @@ starting point depending on what you are trying to achieve.
     <td>
       uiConfig<br/>
       currentUser</td>
-    <td><u>Cannot be</u> injected into the 
+    <td><u>Cannot be</u> injected into the
       `module.config` phase, but can be altered by a `Decorator`.
-    Examples could include an object that tracks currently logged in user 
+    Examples could include an object that tracks currently logged in user
     properties or any other object, properties of which you want to access in
     various parts of your application</td>
   </tr>
@@ -222,8 +224,8 @@ starting point depending on what you are trying to achieve.
       FACEBOOK_ACCOUNT<br/>
       AUTH_EVENTS
     </td>
-    <td>Besides controller and a service, Constant <u>can also be injected</u> 
-        into the `module.config` phase. Constants cannot be altered by a 
+    <td>Besides controller and a service, Constant <u>can also be injected</u>
+        into the `module.config` phase. Constants cannot be altered by a
         `Decorator`. Avoid modifying the Constant. If you need an editable object
         or value, use `Value` component/provider instead.
     </td>
@@ -232,7 +234,7 @@ starting point depending on what you are trying to achieve.
     <td>
       <ol>
         <li>Augment/tweak some-third party service, while leaving the service mostly intact</li>
-        <li>Initialize a value in a `Value` component where such initialization 
+        <li>Initialize a value in a `Value` component where such initialization
             requires access to a factory service</li>
       </ol>
     </td>

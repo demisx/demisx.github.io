@@ -8,8 +8,10 @@ categories: ruby-on-rails
 Just moved from MySQL to PostgreSQL for the new rails apps. I think it is time I try
 something new after being so faithful to MySQL DB for the past X years. My first PostgreSQL
 install didn't go as smooth as I expected, but wasn't too bad. Here is a summary of the installation
-steps that worked for me (assuming you are using the awesome [Homebrew](http://brew.sh/) package 
+steps that worked for me (assuming you are using the awesome [Homebrew](http://brew.sh/) package
 manager).
+
+<!--more-->
 
 ### Uninstall Previous Version of PostgreSQL (if any)
 If you'd like to do a fresh re-install of PostgreSQL DB existing version can be uninstalled this way.
@@ -22,7 +24,7 @@ to executing steps below or it will be deleted!</div>
 
 # Ensure there are no PostgreSQL processes running. Quit whatever is running
 [dmoore]$ ps -ef | grep postgres | grep -v "grep postgres"
-#501 39289     1   0  8:47PM ??         0:00.01 postgres: dmoore beotracker_development [local] idle 
+#501 39289     1   0  8:47PM ??         0:00.01 postgres: dmoore beotracker_development [local] idle
 [dmoore]$ kill -QUIT 39289
 
 # Remove current package
@@ -38,7 +40,7 @@ to executing steps below or it will be deleted!</div>
 
 {% highlight console %}
 # ensure there are no errors with your existing packages
-[dmoore]$ brew doctor 
+[dmoore]$ brew doctor
 
 # update latest formulaes
 [dmoore]$ brew update
@@ -53,17 +55,17 @@ to executing steps below or it will be deleted!</div>
 
 At this point the PostgreSQL DB server is installed and ready to start. Config file is located
 at `/usr/local/var/postgres/postgresql.conf`
- 
+
 {% highlight console %}
 # Start server
 [dmoore]$ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
- 
+
 # Stop server
 [dmoore]$ launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 {% endhighlight %}
 
 ### Managing PostgreSQL with Lunchy Gem
- 
+
 I recommend installing this gem to simplify starting and stopping PostgreSQL server:
 
 {% highlight console %}
@@ -80,8 +82,8 @@ I recommend installing this gem to simplify starting and stopping PostgreSQL ser
 
 Make sure the server is running, then execute commands below. You should see:
 
-1. `which` returning Homebrew's version of `psql` file located at `/usr/local/bin/psql`; and 
-2. `\l` reporting `postgres` db with user (or "role" as postgres calls it) being set to your current 
+1. `which` returning Homebrew's version of `psql` file located at `/usr/local/bin/psql`; and
+2. `\l` reporting `postgres` db with user (or "role" as postgres calls it) being set to your current
 shell user (e.g. "dmoore" in my case).
 
 {% highlight console %}
@@ -94,9 +96,9 @@ shell user (e.g. "dmoore" in my case).
 
 postgres=# \l
                                List of databases
-   Name    | Owner  | Encoding |   Collate   |    Ctype    | Access privileges 
+   Name    | Owner  | Encoding |   Collate   |    Ctype    | Access privileges
 -----------+--------+----------+-------------+-------------+-------------------
- postgres  | dmoore | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ postgres  | dmoore | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
  template0 | dmoore | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/dmoore        +
            |        |          |             |             | dmoore=CTc/dmoore
  template1 | dmoore | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/dmoore        +

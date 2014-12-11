@@ -9,14 +9,16 @@ categories: rails-admin
 that allows you to manage data in models via a simple to use GUI. By default, it
 comes without any authentication enabled, so anyone can access the `/admin` URL.
 It does allow you to integrate with popular authentication frameworks, though,
-like devise and CanCan, however, I find it to be an overkill in small simple 
+like devise and CanCan, however, I find it to be an overkill in small simple
 projects. In case of the latter, I simply opt in for basic authentication over
 HTTPS.
 
+<!--more-->
+
 Here is what needs to be done to enable basic authentication for RailsAdmin:
 
-**Step 1.** Add user and password you wish to protect access with: 
-  
+**Step 1.** Add user and password you wish to protect access with:
+
 ```ruby
 # in config/secrets.yml
 development:
@@ -29,13 +31,13 @@ production:
   password: [myProdPassword]
 ```
 
-**Step 2.** Add these lines to RA initializer: 
-  
+**Step 2.** Add these lines to RA initializer:
+
 ```ruby
 # in config/initializers/reails_admin.rb
   config.authorize_with do
     authenticate_or_request_with_http_basic('Login required') do |username, password|
-      username == Rails.application.secrets.user && 
+      username == Rails.application.secrets.user &&
       password == Rails.application.secrets.password
     end
   end

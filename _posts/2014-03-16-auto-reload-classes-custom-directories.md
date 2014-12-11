@@ -10,6 +10,8 @@ obese waiting any time for a heart attack to choke your app. When refactoring su
 like and follow the approach described by Code Climate in [7 Patterns to Refactor Fat ActiveRecord Models]
 (http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/).
 
+<!--more-->
+
 Leveraging their technique, I create this directory structure for the new objects:
 
  ```
@@ -27,7 +29,7 @@ app/
   |___... ... ...
 ```
 
-and then name space my new objects as I believe it leads to better code organization and 
+and then name space my new objects as I believe it leads to better code organization and
 avoids potential name collisions in the future:
 
 
@@ -42,21 +44,21 @@ module Services
 end
 {% endhighlight %}
 
-The issue with this approach (Rails 4 at the time of writing) that these classes/objects in custom 
+The issue with this approach (Rails 4 at the time of writing) that these classes/objects in custom
 diretories will not be auto reloaded in development environment with default rails config. In fact,
-if name spaced, these classes will throw `Uninitialized constant [your_calling_class]::Services` 
-type of exception, because Rails will not know how to resolve your new name spaced constants. 
+if name spaced, these classes will throw `Uninitialized constant [your_calling_class]::Services`
+type of exception, because Rails will not know how to resolve your new name spaced constants.
 To resolve this issue and make sure that your classes auto reload, you need to do two things:
 
-1. Update _config/application.rb_ file to add "app/" directory to the auto load paths: 
+1. Update _config/application.rb_ file to add "app/" directory to the auto load paths:
 `config.autoload_paths += %W(#{config.root}/app)`
-1. Make sure you don't manually require your new classes anywhere in the code. Let Rails magic 
+1. Make sure you don't manually require your new classes anywhere in the code. Let Rails magic
 do that for you.
 
-That's all. Your new classes should auto reload now similar to rails default controllers, models, 
-views etc. 
+That's all. Your new classes should auto reload now similar to rails default controllers, models,
+views etc.
 
-Special 'thank you' to the awesome rails team @fxn, @jeremy, @thedarkone and all others who helped me with 
+Special 'thank you' to the awesome rails team @fxn, @jeremy, @thedarkone and all others who helped me with
 resolving this issue [Classes not reloaded...](https://github.com/rails/rails/issues/14382)
 ___
 ##### Today my environment was:

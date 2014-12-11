@@ -5,41 +5,43 @@ date:   2014-01-13 21:08:12
 categories: jekyll
 ---
 
-If you don't mind getting your hands on "HTML-like" type of code and looking around for a way to launch a 
-simple blog website paired with free hosting, then [Jekyll](http://jekyllrb.com)</a> 
-should definitely be on your evaluation list. It's open-source, text based and follows baking 
-CMS principle by generating a static site from pre-written markup files. Pair it with free hosting 
-from [GitHub Pages](http://pages.github.com), comments from [Disqus](http://disqus.com) and you have 
-yourself a very flexible blogging platform without required dependencies on a database and third party 
+If you don't mind getting your hands on "HTML-like" type of code and looking around for a way to launch a
+simple blog website paired with free hosting, then [Jekyll](http://jekyllrb.com)</a>
+should definitely be on your evaluation list. It's open-source, text based and follows baking
+CMS principle by generating a static site from pre-written markup files. Pair it with free hosting
+from [GitHub Pages](http://pages.github.com), comments from [Disqus](http://disqus.com) and you have
+yourself a very flexible blogging platform without required dependencies on a database and third party
 module/plugins.
 
-The keyphrase here is "flexible", of course. And as we all know with 
-*Great flexibility comes great responsibility*. One such thing that I thought could be improved is 
-the built-in way of highlighting code snippets with included line numbers. 
+<!--more-->
+
+The keyphrase here is "flexible", of course. And as we all know with
+*Great flexibility comes great responsibility*. One such thing that I thought could be improved is
+the built-in way of highlighting code snippets with included line numbers.
 
 ### Option 1: Via Addition of Custom CSS Rules
 
-In order to have Jekyll highlight a 
+In order to have Jekyll highlight a
 snippet of code in your posts you basically need 3 things:
 
-1. Add [syntax highlighter CSS file](https://gist.github.com/demisx/025698a7b5e314a7a4b5) as 
+1. Add [syntax highlighter CSS file](https://gist.github.com/demisx/025698a7b5e314a7a4b5) as
 `css/syntax.css` to your existing or newly generated Jekyll site
 2. Load CSS inside of a corresponding layout file (e.g. _layouts/default.html) {% highlight html %}
 <head>
   ...
   <link href="/css/syntax.css" rel="stylesheet">
   ...
-</head>{% endhighlight %} 
-3. Wrap your code snippets in posts with 
+</head>{% endhighlight %}
+3. Wrap your code snippets in posts with
 `{% raw %} {% highlight ruby linenos %}...{% endhighlight %} {% endraw %}` Liquid tags and Jekyll
-(via [Pygments highlighter](http://pygments.org)) outputs color highlighted code based on chosen 
-language scheme (e.g. ruby in my case). <span class="text-muted">_(Note, if you don't want to see 
-line numbers appearing next to each code line, simply remove `linenos` 
-directive from `{% raw %} {% highlight ruby %} {% endraw %}` and, probably, there is need to read the 
+(via [Pygments highlighter](http://pygments.org)) outputs color highlighted code based on chosen
+language scheme (e.g. ruby in my case). <span class="text-muted">_(Note, if you don't want to see
+line numbers appearing next to each code line, simply remove `linenos`
+directive from `{% raw %} {% highlight ruby %} {% endraw %}` and, probably, there is need to read the
 rest of this post)_</span>
 
 For example, this snippet of Ruby code:
-{% raw %} 
+{% raw %}
     {% highlight ruby linenos %}
     def show
       puts "Outputting a very lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong line"
@@ -50,7 +52,7 @@ For example, this snippet of Ruby code:
       end
     end
     {% endhighlight %}
-{% endraw %} 
+{% endraw %}
 
 translates by Jekyll's built-in syntax highlighter to this:
 
@@ -107,8 +109,8 @@ Thus, if you are OK to host your code snippets on GitHub as gists, then insertin
 post markup:
 
 ```
-{% raw %} 
-{% gist 8387126 %} 
+{% raw %}
+{% gist 8387126 %}
 {% endraw %}
 ```
 
@@ -117,13 +119,13 @@ snippet:
 
 {% gist 8387126  %}
 
-I have mixed feelings about this particular approach. One one hand, it does make embedding properly 
-highlighted snippets in my posts a walk in a park. On the other hand, it introduces dependency on GitHub. 
-For now, I am sticking with built-in highlighter (Option 1) with GitHub gists being my fall-back option if 
+I have mixed feelings about this particular approach. One one hand, it does make embedding properly
+highlighted snippets in my posts a walk in a park. On the other hand, it introduces dependency on GitHub.
+For now, I am sticking with built-in highlighter (Option 1) with GitHub gists being my fall-back option if
 things go south.
 
 ___
 ##### Today my environment was:
 
-Modestly tested on Jekyll v1.4.3 and may not cover all edge cases. Not been tested on some older 
+Modestly tested on Jekyll v1.4.3 and may not cover all edge cases. Not been tested on some older
 browsers that didn't bother to properly follow CSS standards at the time.

@@ -5,10 +5,12 @@ date:   2014-01-14 12:46:12
 categories: ruby-on-rails
 ---
 
-So, you've finally found some free time to replace your default Rails console with [Pry](https://github.com/pry/pry) 
-and now you want to see nice [Hirb](https://github.com/cldwalker/hirb) formatted output 
-instead of the default IRB one? I hear you. To achieve that just add the following lines to your local `~/.pryrc` file 
+So, you've finally found some free time to replace your default Rails console with [Pry](https://github.com/pry/pry)
+and now you want to see nice [Hirb](https://github.com/cldwalker/hirb) formatted output
+instead of the default IRB one? I hear you. To achieve that just add the following lines to your local `~/.pryrc` file
 (e.g. /home/dmoore/.pryrc)
+
+<!--more-->
 
 {% gist 8320981 %}
 
@@ -21,7 +23,7 @@ For exmaple, Here is how Hirb formats the output of your Rails model rows:
 [dmoore]$ rails c
 Loading development environment (Rails 4.0.2)
 # Graduate is a model class and descendant of ActiveRecord::Base
-[1] pry(main)> Graduate.all 
+[1] pry(main)> Graduate.all
   Graduate Load (28.2ms)  SELECT `graduates`.* FROM `graduates`
 +----+----------------+-------------------------+-------------------------+
 | id | workflow_state | created_at              | updated_at              |
@@ -56,13 +58,12 @@ console use `Hirb.disable` | `Hirb.enable` commands respectively:
 | 3  | initiated      | 2014-01-06 23:36:51 UTC | 2014-01-06 23:36:51 UTC |
 +----+----------------+-------------------------+-------------------------+
 3 rows in set
-[6] pry(main)> 
+[6] pry(main)>
 {% endhighlight %}
 
 ___
 ##### Today my environment was:
 
 - Rails 4.0.2 pry-enabled console
-- Pry version 0.9.12.4 
+- Pry version 0.9.12.4
 - Ruby MRI 2.1.0.
-
