@@ -58,11 +58,21 @@ AngularAtom organization follows the **LIFT** principle coined by John Papa:
 
 {% gist cbbf605db31e7c9f5cf6 angularjs-1-component-organization-sample.sh %}
 
-<div id="post-navigation" class="text-right">
-  {% if page.next.url %}
-  <a href="{{page.next.url}}" title="next Post:
-  {{page.next.title}}"><i class="fa fa-arrow-circle-right"></i> {{page.next.title}}...</a>
-  {% endif %}
+<div id="post-navigation" >
+  <div class="previous">
+    {% if page.previous.url %}
+    <a href="{{page.previous.url}}" title="Previous post: {{page.next.title}}">
+      <i class="fa fa-lg fa-arrow-circle-left"></i>
+      {{page.previous.title}}
+    </a>
+    {% endif %}
+  </div>
+  <div class="next text-right">
+    {% if page.next.url %}
+    <a href="{{page.next.url}}" title="Next post:
+    {{page.next.title}}">NEXT: {{page.next.title}} <i class="fa fa-2x fa-arrow-circle-right"></i></a>
+    {% endif %}
+  </div>
 </div>
 
 ___

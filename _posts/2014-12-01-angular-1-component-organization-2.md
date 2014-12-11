@@ -45,10 +45,27 @@ the logic they are testing (we'll talk about this more in the future posts).
 All other files placed in the root of an application (e.g. `bower.json`, `pakages.json`, `README.md` etc.) are very common to any JS project and not really
 specific to the component-based organization of a project. Thus, we'll not go into details about them.
 
-<div id="post-navigation">
+<div id="post-navigation" >
+  <div class="previous">
+    {% if page.previous.url %}
+    <a href="{{page.previous.url}}" title="Previous post: {{page.next.title}}">
+    <i class="fa fa-lg fa-arrow-circle-left"></i>
+    {{page.previous.title}}
+    </a>
+    {% endif %}
+  </div>
+  <div class="next">
+    {% if page.next.url %}
+    <a href="{{page.next.url}}" title="Next post:
+    {{page.next.title}}">NEXT: {{page.next.title}} <i class="fa fa-2x fa-arrow-circle-right"></i></a>
+    {% endif %}
+  </div>
+
+  <div class="next">
   <a href="#">
-    <i class="fa fa-arrow-circle-right"></i>
+  <i class="fa fa-2x fa-arrow-circle-right"></i>
   </a> Continue to Part 3... (Coming soon)
+  </div>
 </div>
 
 ___
