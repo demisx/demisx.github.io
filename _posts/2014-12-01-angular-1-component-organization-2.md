@@ -5,7 +5,7 @@ date:   2014-12-11 15:59:00
 categories: angularjs atom component-feature-based-organization
 ---
 
-## Level 1: Application Root Organization
+## Level 1: Application root organization
 
 At first level, also known as application root, we break down our application into two main chunks:
 
@@ -45,6 +45,8 @@ the logic they are testing (we'll talk about this more in the future posts).
 All other files placed in the root of an application (e.g. `bower.json`, `pakages.json`, `README.md` etc.) are very common to any JS project and not really
 specific to the component-based organization of a project. Thus, we'll not go into details about them.
 
+As always, please feel free to comment on this post below.
+
 <div id="post-navigation" >
   <div class="previous">
     {% if page.previous.url %}
@@ -59,12 +61,6 @@ specific to the component-based organization of a project. Thus, we'll not go in
     <a href="{{page.next.url}}" title="Next post:
     {{page.next.title}}">NEXT: {{page.next.title}} <i class="fa fa-2x fa-arrow-circle-right"></i></a>
     {% endif %}
-  </div>
-
-  <div class="next">
-  <a href="#">
-  <i class="fa fa-2x fa-arrow-circle-right"></i>
-  </a> Continue to Part 3... (Coming soon)
   </div>
 </div>
 

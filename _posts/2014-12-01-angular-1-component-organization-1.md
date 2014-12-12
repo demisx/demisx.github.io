@@ -75,6 +75,7 @@ AngularAtom organization follows the **LIFT** principle coined by John Papa:
   </div>
 </div>
 
+As always, please feel free to comment on this post below.
 ___
 
 Today my environment was:
