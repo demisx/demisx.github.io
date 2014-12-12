@@ -56,7 +56,7 @@ AngularAtom organization follows the **LIFT** principle coined by John Papa:
 * **F** - Flat structure as long as we can
 * **T** - Try to stay DRY
 
-{% gist cbbf605db31e7c9f5cf6 angularjs-1-component-organization-sample.sh %}
+{% gist cbbf605db31e7c9f5cf6 angularjs-1-component-organization-all.sh %}
 
 <div id="post-navigation" >
   <div class="previous">
