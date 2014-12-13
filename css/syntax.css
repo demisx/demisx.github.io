@@ -60,7 +60,7 @@
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
 
 /* Make line numbers unselectable: excludes line numbers from copy-paste user ops */
-.highlight .lineno {-webkit-user-select: none;-moz-user-select: none; -o-user-select: none;} 
+.highlight .lineno {-webkit-user-select: none;-moz-user-select: none; -o-user-select: none;}
 .lineno::-moz-selection {background-color: transparent;}/* Mozilla specific */
 .lineno::selection {background-color: transparent;} /* Other major browsers */
 
@@ -70,4 +70,4 @@
 .post>.highlight pre code.console .go { color: #bbb; }
 .post>.highlight pre code.console .gp { color: #999; }
 
-.post p code { color: #333; background-color: #F4F4F4 }
+code { color: #333; background-color: #F4F4F4 }

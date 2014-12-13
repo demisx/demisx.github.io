@@ -5,7 +5,13 @@ date:   2014-12-11 15:59:00
 categories: angularjs atom component-feature-based-organization
 ---
 
-## Level 1: Application root organization
+## Level 1 organization
+
+Now we are ready to start reviewing organization structure at level one.
+If you've missed my introduction post into [component-based organization called
+AngularAtom]({% post_url 2014-12-02-angular-1-component-organization-1 %}), recommend reading it first before continuing further:
+
+### Application root
 
 At first level, also known as application root, we break down our application into two main chunks:
 

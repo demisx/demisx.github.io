@@ -5,6 +5,8 @@ date:   2014-12-02 13:59:00
 categories: angularjs atom component-feature-based-organization
 ---
 
+## Introduction
+
 Many of us started the Angular journey by reading the official docs at www.angularjs.org
 and following their [online PhoneCat app tutorial](https://docs.angularjs.org/tutorial).
 I personally think this is a very good tutorial giving an immediate exposure to
