@@ -102,7 +102,7 @@ I recommend [Mocha](http://mochajs.org/) framework with [Chai assertion library]
 
 This concludes my posts on the "AngularAtom&mdash;the component-based organization of
 AngularJS 1.x apps" topic. I hope you found it useful. Please feel free to comment below. I may be making further updates to this organization structure based on the feedback I get
-(I'll make sure to tweet if that happens).
+(I'll make sure to tweet when that happens).
 
 Make sure to check out the original AngularJS PhoneCat app converted to the [new
 AngularAtom component-based structure](https://github.com/demisx/angular-phonecat-components).
