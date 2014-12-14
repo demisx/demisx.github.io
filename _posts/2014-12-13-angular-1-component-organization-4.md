@@ -96,16 +96,22 @@ at any time of the application lifecycle.
 Unit tests are suffixed with `_test` and placed alongside each file they are testing.
 There is no separate folder for the unit tests. This is done intentionally, so it is easier to locate the existing and the missing unit tests.
 
-I recommend [Mocha](http://mochajs.org/) framework with [Chai assertion library](http://chaijs.com/) for writing all of your tests.
+I recommend [Mocha](http://mochajs.org/) framework with
+[Chai assertion library](http://chaijs.com/) for writing all of your tests.
 
 ## Conclusion
 
 This concludes my posts on the "AngularAtom&mdash;the component-based organization of
-AngularJS 1.x apps" topic. I hope you found it useful. Please feel free to comment below. I may be making further updates to this organization structure based on the feedback I get
-(I'll make sure to tweet when that happens).
-
+AngularJS 1.x apps" topic. The entire component-based organization directory
+structure can be viewed in the
+"**tl;dr**" section of the
+[introduction post]({% post_url 2014-12-02-angular-1-component-organization-1 %}).
 Make sure to check out the original AngularJS PhoneCat app converted to the [new
 AngularAtom component-based structure](https://github.com/demisx/angular-phonecat-components).
+
+I hope you found this useful in organizing your Angular 1.x apps.
+I may be making further updates to this organization structure based on the feedback I get,
+so please make sure to share your thoughts in the comments below.
 
 <div id="post-navigation" >
   <div class="previous">
