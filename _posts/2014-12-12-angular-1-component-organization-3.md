@@ -27,6 +27,9 @@ like this:
 * `components/`&mdash;container for all user written application components ([more on components...]({% post_url 2014-12-13-angular-1-component-organization-4 %}))
 * `layouts/`&mdash;container for the layout definition partial files ([more on layouts...]({% post_url 2014-12-13-angular-1-component-organization-4 %}))
 * `states/`&mdash;container for all application UI states ([more on states...]({% post_url 2014-12-13-angular-1-component-organization-4 %}))
+* `app.js`&mdash;defines main application module and lists dependencies on components and states modules
+* `index.html`&mdash;this is the application main entry point. This is where
+`ng-app` directive and top level `ui-view` are placed. The latter creates a placeholder inside the `<body>...</body>` block that abstract states can load layouts to.
 
 We'll look into organization of each of these folders in more detail when we
 examine organization of the third level in the next post.

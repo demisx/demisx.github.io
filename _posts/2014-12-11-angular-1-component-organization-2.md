@@ -5,6 +5,21 @@ date:   2014-12-11 15:59:00
 categories: angularjs atom component-feature-based-organization
 ---
 
+## Global file conventions
+
+* an individual file should be created per each
+Angular resource (e.g. controller, directive, animation, service etc.) and
+the file name should incorporate the name of that particular resource,
+ex. `login-directive.js`, `facebook-service.js`, `phone-animation.js`.
+Do not combine multiple resources in one file.
+* the file name should be suffixed with the type of resource it contains, e.g. `...-model.js`,
+`...-controller.js`, `...-service.js` and so on
+* unit tests should append `_test` to the file name and be placed alongside
+each file the logic of which they are testing. There is no dedicated folder
+for the unit tests. This is done intentionally, so it is easier to locate
+the existing and the missing unit tests.
+
+
 ## Level 1 organization
 
 Now we are ready to start reviewing organization structure at level one.
