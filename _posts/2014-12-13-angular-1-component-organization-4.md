@@ -58,10 +58,16 @@ perspective.
 ### `app/layouts/` folder
 
 This folder contains partial files individually describing each layout supported
-by an application. Even if your application supports only one layout at the moment,
-I still recommend creating this folder and describing your layout in `default.html`
-file. This is a very flexible approach allowing you to add more layouts in the future,
-if needed.
+by the application. Layouts are injected into the main `app/index.html` by the
+abstract states. Your public section, for example, may inject one layout
+(ex. public.html) from the `app.public` abstract state, whilst the secure
+section may inject a completely different layout (ex. secure.html) from
+the `app.secure` abstract state.
+
+Even if your application supports only one layout at the moment,
+I still recommend creating this folder and describing your single layout in
+`default.html` file. This is a very flexible approach that will allow you to
+additional layouts in the future, if needed.
 
 {% gist cbbf605db31e7c9f5cf6 angularjs-1-component-organization-l3-layouts.sh %}
 
