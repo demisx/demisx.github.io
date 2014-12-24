@@ -37,30 +37,40 @@ At first level, also known as application root, we break down our application in
 
 {% gist cbbf605db31e7c9f5cf6 angularjs-1-component-organization-l1.sh %}
 
-* `.build/` - this is the destination directory that contains necessary files for
-your app to run in development or debug mode. This is where you would usually output development specific project files and point your development web server instance to. Make sure your build tool writes here the full version of JS libraries (not minified ones) and the source maps for all preprocessed files (e.g. CoffeeScript, SASS, LESS etc.) in order to aid your debugging experience. We prefix this directory with `.` intentionally, so it shows up at the top of directory listing.
+* `.build/`&mdash;destination directory for your automatic build program
+(e.g. gulp, grunt etc.) to write to. This is where you would usually point your
+development web server to and output:
+  1. _Development build_, i.e. development specific project files.
+  Make sure your build tool writes here the full version of
+  JS libraries (not minified ones) and the source maps for all preprocessed
+  files (e.g. CoffeeScript, SASS, LESS etc.) in order to aid your debugging
+  experience. We prefix this directory with `.` intentionally, so it shows
+  up at the top of directory listing.
+  1. _Production build_, i.e. production ready release files. Therefore, the library files in this
+  directory are concatenated and minified. It contains no source maps or
+  anything that is not needed for your release to function in production mode.
 
-* `.dist/` - this is the destination directory for your production ready release files. Therefore, the library files in this directory are concatenated and minified.
-It contains no source maps or anything that is not needed for your release to function in production mode.
+* `app/`&mdash;this is  where all **user-generated** application source code
+goes to. A rule of thumb: if you didn't write it, don't place it here. Exceptions
+are the 3rd party libraries necessary to support a given component. Though, you
+didn't write them, they are still placed inside `app/components/[componentName]/vendor/`
+directory in order to maintain the integrity of a component.
 
-* `app/` - this is  where all **user-generated** application code goes to. If you
-didn't write it, don't place it here.
+* `bower_components/`&mdash;container for the global 3rd party client libraries managed by the [bower&nbsp;package&nbsp;manager](http://bower.io/)
 
-* `bower_components/` - container for the global 3rd party client libraries managed by the [bower&nbsp;package&nbsp;manager](http://bower.io/)
-
-* `config/` - contains all application configuration files required by your project. These include, but not limited to, config files for unit and e2e testing, web server
+* `config/`&mdash;contains all application configuration files required by your project. These include, but not limited to, config files for unit and e2e testing, web server
 setup, CI, deployments etc.
 
-* `node_modules/` - container for the global 3rd party Node.js libraries managed by the [npm&nbsp;package&nbsp;manager](https://www.npmjs.com/)
+* `node_modules/`&mdash;container for the global 3rd party Node.js libraries managed by the [npm&nbsp;package&nbsp;manager](https://www.npmjs.com/)
 
-* `scripts/` - container for all shell scripts used in the project, if any
+* `scripts/`&mdash;container for all shell scripts used in the project, if any
 
-* `tests-e2e/` - container for end-to-end tests. These are the full lifecycle tests
+* `tests-e2e/`&mdash;container for end-to-end tests. These are the full lifecycle tests
 using 3rd party APIs. There are no mocks in e2e tests. Do
 not place unit tests here. They will be placed inside `app/` directory alongside
 the logic they are testing (we'll talk about this more in the future posts).
 
-* `tests-request/` - container for request tests. Request tests differ from e2e tests that they mock out 3rd party APIs (e.g. Facebook, Google etc.). Each request test lifecycle starts and ends within the application itself and never reaches outside of its boundaries. Do not place unit tests here. They will be placed inside `app/` directory alongside the logic they are testing
+* `tests-request/`&mdash;container for request tests. Request tests differ from e2e tests that they mock out 3rd party APIs (e.g. Facebook, Google etc.). Each request test lifecycle starts and ends within the application itself and never reaches outside of its boundaries. Do not place unit tests here. They will be placed inside `app/` directory alongside the logic they are testing
 (we'll talk about this more in the future posts).
 
 All other files placed in the root of an application (e.g. `bower.json`, `pakages.json`, `README.md` etc.) are very common to any JS project and not really
