@@ -49,10 +49,10 @@ part of components and they do not create their own
 modules. Instead, they define their methods (controllers, directives, services etc.)
 on the parent component's module itself.
 
-* `utils/`&mdash;an optional component reserved for the helper functions usually
+* `helpers/`&mdash;an optional component reserved for the helper utility functions usually
 implemented as [pure functions](http://en.wikipedia.org/wiki/Pure_function).
 Alternatively, you may choose to create a separate component for each of these
-functions in lieu of the `utils/` folder. Whatever works best from your app's
+functions in lieu of the common `helpers/` folder. Whatever works best from your app's
 perspective.
 
 ### `app/layouts/` folder
@@ -99,11 +99,12 @@ at any time of the application lifecycle.
 
 ### Unit tests
 
-Unit tests are suffixed with `_test` and placed alongside each file they are testing.
-There is no separate folder for the unit tests. This is done intentionally, so it is easier to locate the existing and the missing unit tests.
+Unit tests are suffixed with `_spec` and placed alongside each file they are testing.
+There is no separate folder for the unit tests. This is done intentionally,
+so it is easier to locate the existing and the missing unit tests.
 
 I recommend [Mocha](http://mochajs.org/) framework with
-[Chai assertion library](http://chaijs.com/) for writing all of your tests.
+[Chai assertion library](http://chaijs.com/) for writing all of your specs.
 
 ## Conclusion
 

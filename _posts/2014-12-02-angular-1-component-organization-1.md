@@ -31,9 +31,9 @@ to be maintained over time (a.k.a any production app):
 In the next few posts, we'll try to overcome these shortcomings by learning
 about component-based organization named 'AngularAtom' that groups various web
 resources around a particular component instead of grouping them
-by type. We'll take the original
-[type-based Angular PhoneCat app tutorial](https://docs.angularjs.org/tutorial)
-and reorganize it to be [component-based](https://github.com/demisx/angular-phonecat-components).
+by type. We'll take the original [type-based tutorial](https://docs.angularjs.org/tutorial)
+and reorganize it to be a
+[component-based Angular PhoneCat app tutorial](https://github.com/demisx/angular-phonecat-components).
 This will also help us to get our mind set on the component oriented development
 today and be better prepared when Angular 2.0 hits the prime time.
 
@@ -58,6 +58,8 @@ AngularAtom organization follows the **LIFT** principle coined by John Papa:
 * **F** - Flat structure as long as we can
 * **T** - Try to stay DRY
 
+As always, please feel free to comment on this post below.
+
 {% gist cbbf605db31e7c9f5cf6 angularjs-1-component-organization-all.sh %}
 
 <div id="post-navigation" >
@@ -77,7 +79,7 @@ AngularAtom organization follows the **LIFT** principle coined by John Papa:
   </div>
 </div>
 
-As always, please feel free to comment on this post below.
+
 ___
 
 Today my environment was:

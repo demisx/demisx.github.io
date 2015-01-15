@@ -14,7 +14,7 @@ ex. `login-directive.js`, `facebook-service.js`, `phone-animation.js`.
 Do not combine multiple resources in one file.
 * the file name should be suffixed with the type of resource it contains, e.g. `...-model.js`,
 `...-controller.js`, `...-service.js` and so on
-* unit tests should append `_test` to the file name and be placed alongside
+* unit tests should append `_spec` to the file name and be placed alongside
 each file the logic of which they are testing. There is no dedicated folder
 for the unit tests. This is done intentionally, so it is easier to locate
 the existing and the missing unit tests.
@@ -65,13 +65,11 @@ setup, CI, deployments etc.
 
 * `scripts/`&mdash;container for all shell scripts used in the project, if any
 
-* `tests-e2e/`&mdash;container for end-to-end tests. These are the full lifecycle tests
-using 3rd party APIs. There are no mocks in e2e tests. Do
-not place unit tests here. They will be placed inside `app/` directory alongside
-the logic they are testing (we'll talk about this more in the future posts).
-
-* `tests-request/`&mdash;container for request tests. Request tests differ from e2e tests that they mock out 3rd party APIs (e.g. Facebook, Google etc.). Each request test lifecycle starts and ends within the application itself and never reaches outside of its boundaries. Do not place unit tests here. They will be placed inside `app/` directory alongside the logic they are testing
+* `specs/`&mdash;container for various helpers, request specs, end-to-end specs (lifecycle tests
+using 3rd party APIs, no mocks) etc. Do not place unit tests here. They will be
+placed inside `app/` directory alongside the logic they are testing
 (we'll talk about this more in the future posts).
+
 
 All other files placed in the root of an application (e.g. `bower.json`, `pakages.json`, `README.md` etc.) are very common to any JS project and not really
 specific to the component-based organization of a project. Thus, we'll not go into details about them.
