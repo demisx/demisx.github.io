@@ -28,23 +28,11 @@ $ npm uninstall gulp -g
 $ cd [your_project_root]
 $ npm uninstall gulp
 
-# install Gulp 4 globally from 4.0 GitHub branch
-$ npm install gulpjs/gulp#4.0 -g
+# install Gulp 4 CLI tools globally from 4.0 GitHub branch
+$ npm install gulpjs/gulp-cli#4.0 -g
 
-
-# Update your project package.json to include new gulp 4.0 dev dependency
-$ vi package.json
----
-{
-  ...
-  "devDependencies": {
-    "gulp": "gulpjs/gulp#4.0"
-    ...
-  }
-}
-
-# Run the install in your project root to install your local gulp module
-$ npm install
+# install Gulp 4 into your project
+$ npm install gulpjs/gulp.git#4.0 --save-dev
 ```
 
 Your new v4 version should be ready to use now. Here is a sample
