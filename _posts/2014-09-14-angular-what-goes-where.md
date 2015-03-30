@@ -156,7 +156,7 @@ starting point depending on what you are trying to achieve.
       CreditCard</td>
     <td>
       For anything more than a trivial implementation, I recommend using<br/>
-      <a href="www.js-data.io/docs/js-data-angular" target="_blank">js-data-angular</a> instead of
+      <a href="http://www.js-data.io/docs/js-data-angular" target="_blank">js-data-angular</a> instead of
       the built-in `$resource`.
     </td>
   </tr>
