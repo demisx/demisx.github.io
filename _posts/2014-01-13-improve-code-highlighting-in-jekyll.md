@@ -84,8 +84,8 @@ So, to improve the formatting of line numbers, just add these 2 lines to your `s
 
 {% highlight css linenos %}
 /* Add to css/syntax.css */
-.post > .highlight .lineno { color: #ccc; display:inline-block; padding: 0 5px; border-right:1px solid #ccc; }
-.post > .highlight pre code { display: block; white-space: pre; overflow-x: auto; word-wrap: normal; }
+.highlight .lineno { color: #ccc; display:inline-block; padding: 0 5px; border-right:1px solid #ccc; }
+.highlight pre code { display: block; white-space: pre; overflow-x: auto; word-wrap: normal; }
 {% endhighlight %}
 
 And now your code snippets will be highlighted as this:
