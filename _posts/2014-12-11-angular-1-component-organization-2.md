@@ -37,7 +37,7 @@ At first level, also known as application root, we break down our application in
 
 {% gist cbbf605db31e7c9f5cf6 angularjs-1-component-organization-l1.sh %}
 
-* `.build/`&mdash;destination directory for your automatic build program
+* `_build/`&mdash;destination directory for your automatic build program
 (e.g. gulp, grunt etc.) to write to. This is where you would usually point your
 development web server to and output:
   1. _Development build_, i.e. development specific project files.

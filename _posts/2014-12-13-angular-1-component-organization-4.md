@@ -99,12 +99,14 @@ at any time of the application lifecycle.
 
 ### Unit tests
 
-Unit tests are suffixed with `_spec` and placed alongside each file they are testing.
+Unit tests are suffixed with `.spec.js` and placed alongside each file they are testing.
 There is no separate folder for the unit tests. This is done intentionally,
-so it is easier to locate the existing and the missing unit tests.
+so it is easier to locate the existing and/or missing unit test for any given file.
 
 I recommend [Mocha](http://mochajs.org/) framework with
-[Chai assertion library](http://chaijs.com/) for writing all of your specs.
+[Chai assertion library](http://chaijs.com/) for writing all of your unit tests. This library has
+great support on the NodeJS server side as well. Keep your code across frontend and backend 
+as consistent as possible.
 
 ## Conclusion
 
