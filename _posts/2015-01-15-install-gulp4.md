@@ -5,11 +5,7 @@ date:   2015-01-15 9:34:00
 categories: gulp4
 ---
 
-##
-
-___
-
-With Gulp 4 approaching its release date many would like to intall it now
+With Gulp 4 approaching its release date many would like to install it now
 and take advantage of the cool goodies the new v4 comes with.
 Can't blame them&mdash;we've switched to Gulp 4 a few weeks ago and couldn't be happier.
 
