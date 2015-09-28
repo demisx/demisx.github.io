@@ -15,6 +15,12 @@ This usually happens when I am the only committer on the project.
 <!--more-->
 
 Starting with git version 1.7.3 it became possible to pass a strategy option to `git rebase` command. 
+
+The use of `-Xtheirs` and `-Xours` appear to be somewhat counterintuitive, so think of it as telling
+git which branch files to override when resolving rebase conflicts, i.e. `-Xtheirs` will keep 
+your branch changes by overwriting files in the branch you are rebasing to and `-Xours` will 
+overwrite your own branch with the original files in the branch your are committing to.
+
 Thus, if I want to rebase to `master` and tell git to use my feature branch as the latest source when 
 conflicts arise, I need to do the following:
 
@@ -31,10 +37,6 @@ $ git checkout [my-feature-branch]
 $ git rebase -Xours master
 ```
 
-The use of `-Xtheirs` and `-Xours` appear to be somewhat counterintuitive, so think of it as telling
-git which branch files to override when resolving rebase conflicts, i.e. `-Xtheirs` will keep 
-your branch changes by overwriting files in the branch you are rebasing to and `-Xours` will 
-overwrite your own branch with the original files in the branch your are committing to.
 
 Similar options exist in `git merge` command as well.
 
