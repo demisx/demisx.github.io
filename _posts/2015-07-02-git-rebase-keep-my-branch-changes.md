@@ -5,10 +5,10 @@ date:   2015-07-02 9:34:00
 categories: git rebase
 ---
 
-Quite often I find myself in a situation when I need to rebase my feature branch containing 
+Quite often I find myself in a situation when I need to rebase my local feature branch containing 
 the latest code against the `master`, but running `git rebase master` generates a bunch of 
-conflicts that I am expected to fix manually, though I know that my feature branch 
-has the latest and greatest and I simply want the files in my feature branch overwrite 
+conflicts that I am expected to fix manually, though I know that my local feature branch 
+has the latest and greatest and I simply want the changes in my feature branch overwrite 
 the corresponding files in `master` each time such conflict arises. 
 This usually happens when I am the only committer on the project.
 
@@ -17,28 +17,37 @@ This usually happens when I am the only committer on the project.
 Starting with git version 1.7.3 it became possible to pass a strategy option to `git rebase` command. 
 
 The use of `-Xtheirs` and `-Xours` appear to be somewhat counterintuitive, so think of it as telling
-git which branch files to override when resolving rebase conflicts, i.e. `-Xtheirs` will keep 
-your branch changes by overwriting files in the branch you are rebasing to and `-Xours` will 
-overwrite your own branch with the original files in the branch your are committing to.
+git which branch code to favor when resolving rebase conflicts. For example, when doing: 
 
-Thus, if I want to rebase to `master` and tell git to use my feature branch as the latest source when 
-conflicts arise, I need to do the following:
-
-```bash
-$ git checkout [my-feature-branch]
-$ git rebase -Xtheirs master
+```sh
+# see current branch
+$ git branch
+---
+* branch-a
+...
+# rebase preferring current branch changes merge during conflicts
+$ git rebase -Xtheirs branch-b
 ```
 
-Vice versa, if you want to rebase onto another branch and use that branch as the latest source when
-resolving conflicts use `-Xours` option instead:
+`-Xtheirs` will favor your current `branch-a` code when overwriting merge conflicts, 
+and vice versa `-Xours` will  overwrite merge conflicts with with the code in `branch-b`.
 
-```bash
-$ git checkout [my-feature-branch]
-$ git rebase -Xours master
+Similar options exist in `git merge` command as well, but the meaning of `-Xtheirs` and `-Xours` is
+reversed due to the differences on how `git rebase` and `git merge` operate and what they consider
+`ours` vs. `theirs`:
+
+```sh
+# assuming branch-a is our current version
+$ git rebase -Xtheirs branch-b # <- ours: branch-b, theirs: branch-a
+$ git merge -Xtheirs branch-b  # <- ours: branch-a, theirs: branch-b
 ```
 
+Thus, if you are merging changes from `origin/master` and would like 
+git to favor your current branch code during merge conflicts, you'd need to do this:
 
-Similar options exist in `git merge` command as well.
+```sh
+$ git merge -Xours origin/master
+```
 
 Today my environment was:
 
