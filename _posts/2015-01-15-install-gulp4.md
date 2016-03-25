@@ -11,10 +11,11 @@ Can't blame them&mdash;we've switched to Gulp 4 a few weeks ago and couldn't be 
 
 <!--more-->
 
-Please note, this installation assumes replacement of previous version of Gulp
-with the new Gulp 4 version. It's possible to keep them both, but I haven't
-tested that yet. For complete replacement, follow these instructions
-until v4 is officially released on bower:
+Please note, this installation assumes replacement of the previous version of Gulp
+with the new Gulp 4 version. It's possible to keep them both, but I neither have
+tested that yet, nor had any project requirements to do so. 
+For the complete replacement, please follow these instructions until v4 is 
+officially released on bower:
 
 
 ```bash
@@ -24,11 +25,17 @@ $ npm uninstall gulp -g
 $ cd [your_project_root]
 $ npm uninstall gulp
 
-# install Gulp 4 CLI tools globally from 4.0 GitHub branch
-$ npm install gulpjs/gulp-cli#4.0 -g
+# install the latest Gulp 4 CLI tools globally
+$ npm install gulpjs/gulp-cli -g
 
 # install Gulp 4 into your project
 $ npm install gulpjs/gulp.git#4.0 --save-dev
+
+# check the versions installed
+$ gulp -v
+---
+[10:48:35] CLI version 1.2.1
+[10:48:35] Local version 4.0.0-alpha.2
 ```
 
 Your new v4 version should be ready to use now. Here is a sample
@@ -38,11 +45,11 @@ Some samples are also available on the (project's 4.0 branch)
 
 The Gulp 4 documentation effort is on the way.
 (Watch and contribute)[https://github.com/gulpjs/gulp/issues/803]
-Just be careful parsing existing documentation. Some of it is still v3
-and hasn't been updated.
+Just be careful parsing existing docs. Some of it is still v3 specific and hasn't been updated
+at the time of writing this post.
 
 Today my environment was:
 
-- Gulp 4.0.0-alpha.1
-- npm 2.0.0-alpha-5
-- Mac OS X 10.10.1
+- Gulp 4.0.0-alpha.2
+- npm 3.3.12
+- Mac OS X 10.11.4
