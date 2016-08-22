@@ -32,10 +32,10 @@ $ npm cache clean
 # Install the latest Gulp CLI tools globally
 $ npm install gulpjs/gulp-cli -g
 
-# Install Gulp 4 into your project from 4.0 GitHub branch
+# Install Gulp 4 into your project from 4.0 GitHub branch as dev dependency
 $ npm install gulpjs/gulp#4.0 --save-dev
 
-# Check the versions installed
+# Check the versions installed. Make sure your versions are not lower than shown.
 $ gulp -v
 ---
 [10:48:35] CLI version 1.2.2
@@ -44,11 +44,11 @@ $ gulp -v
 
 Your new v4 version should be ready to use now. Here is a sample
 [v4 gulpfile.js](https://gist.github.com/demisx/beef93591edc1521330a) to get you started.
-Some samples are also available on the (project's 4.0 branch)
-[https://github.com/gulpjs/gulp/tree/4.0].
+Some samples are also available on the [project's 4.0 branch]
+(https://github.com/gulpjs/gulp/tree/4.0).
 
-The Gulp 4 documentation effort is on the way.
-(Watch and contribute)[https://github.com/gulpjs/gulp/issues/803]
+The Gulp 4 documentation effort is on the way and 4.0 has been in beta for quite a long time now.
+However, the code is very stable and we haven't had any issues with it.
 Just be careful parsing existing docs. Some of it is still v3 specific and hasn't been updated
 at the time of writing this post.
 
