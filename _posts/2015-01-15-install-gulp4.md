@@ -20,18 +20,20 @@ officially released on bower:
 
 ```bash
 
-# uninstall previous Gulp installation, if any
-$ npm uninstall gulp -g
-$ cd [your_project_root]
-$ npm uninstall gulp
+# Uninstall previous Gulp installation and related packages, if any
+$ npm rm gulp -g
+$ npm rm gulp-cli -g
+$ cd [your-project-dir/]
+$ npm rm gulp
+$ npm cache clean
 
-# install the latest Gulp 4 CLI tools globally
+# Install the latest Gulp CLI tools globally
 $ npm install gulpjs/gulp-cli -g
 
-# install Gulp 4 into your project
+# Install Gulp 4 into your project
 $ npm install gulpjs/gulp#4.0 --save-dev
 
-# check the versions installed
+# Check the versions installed
 $ gulp -v
 ---
 [10:48:35] CLI version 1.2.2
