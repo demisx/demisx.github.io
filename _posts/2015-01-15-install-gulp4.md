@@ -44,8 +44,7 @@ $ gulp -v
 
 Your new v4 version should be ready to use now. Here is a sample
 [v4 gulpfile.js](https://gist.github.com/demisx/beef93591edc1521330a) to get you started.
-Some samples are also available on the [project's 4.0 branch]
-(https://github.com/gulpjs/gulp/tree/4.0).
+Some samples are also available on the [project's 4.0 branch](https://github.com/gulpjs/gulp/tree/4.0).
 
 The Gulp 4 documentation effort is on the way and 4.0 has been in beta for quite a long time now.
 However, the code is very stable and we haven't had any issues with it.
