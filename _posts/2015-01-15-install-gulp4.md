@@ -29,12 +29,12 @@ $ npm uninstall gulp
 $ npm install gulpjs/gulp-cli -g
 
 # install Gulp 4 into your project
-$ npm install gulpjs/gulp.git#4.0 --save-dev
+$ npm install gulpjs/gulp#4.0 --save-dev
 
 # check the versions installed
 $ gulp -v
 ---
-[10:48:35] CLI version 1.2.1
+[10:48:35] CLI version 1.2.2
 [10:48:35] Local version 4.0.0-alpha.2
 ```
 
