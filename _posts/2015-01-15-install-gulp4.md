@@ -24,13 +24,15 @@ officially released on bower:
 $ npm rm gulp -g
 $ npm rm gulp-cli -g
 $ cd [your-project-dir/]
-$ npm rm gulp
+$ npm rm gulp --save-dev
+$ npm rm gulp --save
+$ npm rm gulp --save-optional
 $ npm cache clean
 
 # Install the latest Gulp CLI tools globally
 $ npm install gulpjs/gulp-cli -g
 
-# Install Gulp 4 into your project
+# Install Gulp 4 into your project from 4.0 GitHub branch
 $ npm install gulpjs/gulp#4.0 --save-dev
 
 # Check the versions installed
@@ -53,5 +55,6 @@ at the time of writing this post.
 Today my environment was:
 
 - Gulp 4.0.0-alpha.2
-- npm 3.3.12
-- Mac OS X 10.11.4
+- node 6.4.0
+- npm 3.10.6
+- Mac OS X 10.11.6
