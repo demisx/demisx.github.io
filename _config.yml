@@ -3,7 +3,7 @@ lsi: false
 host: localhost
 port: 4001
 description: Programming blog by @demisx1 on software patterns and solutions utilized in a full-stack
-highlighter: pygments
+highlighter: rouge
 url: http://demisx.github.io
 excerpt_separator: <!--more-->
 plugins:
