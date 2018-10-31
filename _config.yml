@@ -3,9 +3,8 @@ lsi: false
 host: localhost
 port: 4001
 description: Programming blog by @demisx1 on software patterns and solutions utilized in a full-stack
-#redcarpet:
-#  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 highlighter: pygments
 url: http://demisx.github.io
 excerpt_separator: <!--more-->
-gems: [jekyll-gist]
+plugins:
+  - jekyll-gist

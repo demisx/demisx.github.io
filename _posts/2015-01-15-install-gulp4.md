@@ -13,12 +13,12 @@ Can't blame them&mdash;we've switched to Gulp 4 a few weeks ago and couldn't be 
 
 Please note, this installation assumes replacement of the previous version of Gulp
 with the new Gulp 4 version. It's possible to keep them both, but I neither have
-tested that yet, nor had any project requirements to do so. 
-For the complete replacement, please follow these instructions until v4 is 
+tested that yet, nor had any project requirements to do so.
+For the complete replacement, please follow these instructions until v4 is
 officially released on bower:
 
 
-```bash
+```sh
 
 # Uninstall previous Gulp installation and related packages, if any
 $ npm rm gulp -g
@@ -33,13 +33,13 @@ $ npm cache clean
 $ npm install gulpjs/gulp-cli -g
 
 # Install Gulp 4 into your project from 4.0 GitHub branch as dev dependency
-$ npm install gulpjs/gulp#4.0 --save-dev
+$ npm install gulp@next --save-dev
 
 # Check the versions installed. Make sure your versions are not lower than shown.
 $ gulp -v
 ---
-[10:48:35] CLI version 1.2.2
-[10:48:35] Local version 4.0.0-alpha.2
+[10:48:35] CLI version 2.0.1
+[10:48:35] Local version 4.0.0
 ```
 
 Your new v4 version should be ready to use now. Here is a sample
@@ -53,7 +53,7 @@ at the time of writing this post.
 
 Today my environment was:
 
-- Gulp 4.0.0-alpha.2
-- node 6.4.0
-- npm 3.10.6
-- Mac OS X 10.11.6
+- Gulp 4.0.0
+- node 10.12.0
+- npm 6.4.1
+- Mac OS X 10.14.1
