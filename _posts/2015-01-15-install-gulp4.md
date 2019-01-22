@@ -32,8 +32,8 @@ $ npm cache clean
 # Install the latest Gulp CLI tools globally
 $ npm install gulpjs/gulp-cli -g
 
-# Install Gulp 4 into your project from 4.0 GitHub branch as dev dependency
-$ npm install gulp@next --save-dev
+# Install Gulp 4 into your project as dev dependency
+$ npm install gulp --save-dev
 
 # Check the versions installed. Make sure your versions are not lower than shown.
 $ gulp -v
