@@ -17,11 +17,11 @@ the proper code organization. Being a perfectionist didn't help either. Coming f
 opiniated Rails framework it didn't feel comfortable at first that AngularJS gave
 significantly more freedom to do things. But thank God the "Rails magic" is gone!
 
-The type of questions that kept poping up  in my head were:
+The type of questions that kept popping up in my head were:
 
-* "OK, I want to code this functionality, but where shoud I really put it"?
-* Should I stick this code into a View controller, or should I put it into a Service?
-* Perhaps, a directive could be a good place for it, but then where exactly in a directive?
+* "OK, I want to code this functionality, but where shoud I really put it?"
+* "Should I stick this code into a View controller, or should I put it into a Service?"
+* "Perhaps, a directive could be a good place for it, but then where exactly in a directive?"
 
 Doing my googling I've realized there were plenty of other pilligrims like me
 trying to find their way in this new and exciting AngularJS world.
@@ -108,7 +108,7 @@ starting point depending on what you are trying to achieve.
   <tr>
     <td>
       <ol>
-        <li>View specific business logic</li>
+        <li>View-specific business logic</li>
       </ol>
     </td>
     <td>View Service</td>
@@ -118,7 +118,7 @@ starting point depending on what you are trying to achieve.
       adListViewService
     </td>
     <td>
-      Keeping view logic in application controllers makes them eventually fat. Recommend
+      Keeping view logic in application controllers makes them fat eventually. Recommend
       placing it in the view service instead and have controllers simply call these
       view service methods and process their responses.
     </td>
@@ -194,7 +194,7 @@ starting point depending on what you are trying to achieve.
       <ol>
         <li>Manipulations of DOM instances in linked HTML</li>
         <li>Addition of DOM event listeners</li>
-        <li>Directive specific scope watchers and/or attribute observers</li>
+        <li>Directive-specific scope watchers and/or attribute observers</li>
       </ol>
     </td>
     <td>DOM Instance Manipulator</td>
@@ -268,7 +268,7 @@ starting point depending on what you are trying to achieve.
     <td>myLog</td>
     <td>
       If you simply want to replace an instance, then using `Factory` or `Value`
-      component is musch simpler
+      component is much simpler
     </td>
   </tr>
 </table>
